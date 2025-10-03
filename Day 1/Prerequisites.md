@@ -1,0 +1,74 @@
+# Install Terraform
+
+## Windows
+
+Install Terraform from the Downloads Page
+
+(or)
+
+
+Use GitHub Codespaces (Free for 60 hours per month)
+
+Login to your GitHub account
+
+Click on the Profile Icon to the top right
+
+Click on "your codespaces" as shown in the Image
+
+Codespaces will provide you a virtual machine with Ubuntu and VS Code by default.
+
+Follow the steps provided in the Downloads Page for Linux.
+
+
+##Linux
+
+Follow the steps provided in the Downloads Page for Linux.
+
+
+##macOS
+
+Follow the steps provided in the Downloads Page for macOS.
+
+
+# Install AWS CLI :
+
+##Setup Terraform for AWS
+
+To configure AWS credentials and set up Terraform to work with AWS, you'll need to follow these steps:
+
+## Install AWS CLI (Command Line Interface):
+
+Make sure you have the AWS CLI installed on your machine. You can download and install it from the AWS CLI download page.
+
+##Create an AWS IAM User:
+
+To interact with AWS programmatically, you should create an IAM (Identity and Access Management) user with appropriate permissions. Here's how to create one:
+
+a. Log in to the AWS Management Console with an account that has administrative privileges.
+
+b. Navigate to the IAM service.
+
+c. Click on "Users" in the left navigation pane and then click "Add user."
+
+Choose a username, select "Programmatic access" as the access type, and click "Next: Permissions."
+
+Attach policies to this user based on your requirements. At a minimum, you should attach the "AmazonEC2FullAccess" policy for basic EC2
+ 
+operations. If you need access to other AWS services, attach the relevant policies accordingly.
+
+Review the user's configuration and create the user. Be sure to save the Access Key ID and Secret Access Key that are displayed after user
+
+ creation; you'll need these for Terraform.
+
+##Configure AWS CLI Credentials:
+
+Use the AWS CLI to configure your credentials. Open a terminal and run:
+
+aws configure
+
+It will prompt you to enter your AWS Access Key ID, Secret Access Key, default region, and default output format. Enter the credentials 
+
+you obtained in the previous step.
+
+# Install Visual Studio Code 
+
