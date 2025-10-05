@@ -29,3 +29,29 @@ terraform apply -var-file=dev.tfvars
 ```
 
 By using `.tfvars` files, you can keep your Terraform code more generic and flexible while tailoring configurations to different scenarios and environments.
+
+##dev.tfvars
+
+ami           = "ami-0c55b159cbfafe1f0"
+instance_type = "t2.micro"
+environment   = "dev"
+
+##staging.tfvars
+
+ami           = "ami-0d5d9d301c853a04a"
+instance_type = "t2.small"
+environment   = "staging"
+
+##prod.tfvars
+
+ami           = "ami-0a91cd140a1fc148a"
+instance_type = "t2.medium"
+environment   = "prod"
+
+
+For Dev,
+
+terraform init
+
+terraform plan -var-file="terraform.dev.tfvars"
+terraform apply -var-file="terraform.dev.tfvars"
